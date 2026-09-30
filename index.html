@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-to-Voice Studio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1><i class="fa-solid fa-wand-magic-sparkles"></i> Text to Voice</h1>
+
+        <div class="input-group">
+            <textarea id="text" placeholder="Matnni shu yerga kiriting..."></textarea>
+        </div>
+
+        <div class="controls">
+            <div class="control-group full-width">
+                <label for="voices"><i class="fa-solid fa-language"></i> Ovozni tanlang:</label>
+                <select id="voices">
+                    <option value="">Ovozlar yuklanmoqda...</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="rate">
+                    <span><i class="fa-solid fa-gauge-high"></i> Tezlik</span>
+                    <span id="rateValue" class="value-badge">1.0x</span>
+                </label>
+                <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+            </div>
+
+            <div class="control-group">
+                <label for="pitch">
+                    <span><i class="fa-solid fa-sliders"></i> Ovoz toni (Pitch)</span>
+                    <span id="pitchValue" class="value-badge">1.0</span>
+                </label>
+                <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+            </div>
+        </div>
+
+        <div class="visualizer" id="visualizer">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <div class="button-group">
+            <button id="speak" class="btn btn-primary">
+                <i class="fa-solid fa-play"></i> Ovoz chiqarish
+            </button>
+            <button id="stop" class="btn btn-secondary">
+                <i class="fa-solid fa-square"></i> To'xtatish
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
